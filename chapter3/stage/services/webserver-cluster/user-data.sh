@@ -5,3 +5,5 @@ cat > index.html <<EOF
 <p>${db_address}</p>
 <p>${db_port}</p>
 EOF
+
+nohup busybox httpd -f -p "${server_port}" &
